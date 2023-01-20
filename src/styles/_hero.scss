@@ -1,4 +1,4 @@
-@use "./mixin" as *;
+@use "mixin" as *;
 
 .main-hero {
   background-color: #6b4e71;
@@ -20,4 +20,65 @@
 .main-hero-highlight-links a:hover,
 .main-hero-highlight-links a:focus {
   color: #ffc4c4;
+}
+
+@include mq(sp) {
+  .main-hero {
+    padding: 100px 0 80px;
+  }
+
+  .main-hero-highlight-links p {
+    margin-bottom: 20px;
+
+    & > br {
+      display: none;
+    }
+  }
+
+  .main-hero-img {
+    display: none;
+  }
+}
+
+@include mq(tb) {
+  .main-hero {
+    padding: 140px 0 100px;
+  }
+
+  .main-hero-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-hero-highlight {
+    width: 60%;
+  }
+
+  .main-hero-img {
+    display: block;
+    width: 40%;
+    padding-left: 20px;
+  }
+
+  .main-hero-img img {
+    border-radius: 50%;
+  }
+}
+
+@include mq(pc) {
+  .main-hero {
+    padding: 160px 0 120px;
+  }
+
+  .main-hero-highlight {
+    width: 70%;
+  }
+
+  .main-hero-highlight-links p > br {
+    display: inline;
+  }
+
+  .main-hero-img {
+    width: 30%;
+  }
 }

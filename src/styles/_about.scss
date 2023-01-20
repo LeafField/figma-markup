@@ -1,3 +1,5 @@
+@use "mixin" as *;
+
 .main-about {
   background-color: #fff;
 }
@@ -13,5 +15,87 @@
   &:hover,
   &:focus {
     color: #ab9698;
+  }
+}
+
+@include mq(sp) {
+  .main-about {
+    padding-top: 80px 0 60px;
+
+    &-img {
+      text-align: center;
+    }
+  }
+
+  .main-about-img .mobile {
+    max-width: 200px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+  }
+
+  .main-about-img .tablet-and-up {
+    display: none;
+  }
+
+  .main-about-description,
+  .main-about-addition-skills {
+    margin-bottom: 30px;
+  }
+
+  .main-about-addition-skills ul,
+  .main-about-addition-skills li {
+    margin-bottom: 10px;
+  }
+}
+
+@include mq(tb) {
+  .main-about {
+    padding: 100px 0;
+  }
+
+  .main-about-img .mobile {
+    display: none;
+  }
+
+  .main-about-img .tablet-and-up {
+    display: block;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .main-about-container {
+    display: flex;
+  }
+
+  .main-about-description,
+  .main-about-addition {
+    width: 50%;
+  }
+
+  .main-about-description {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+
+@include mq(pc) {
+  .main-about-addition-skills {
+    display: flex;
+
+    & ul {
+      margin-bottom: 0;
+    }
+
+    & ul + ul {
+      margin-left: 30px;
+    }
+  }
+
+  .main-about {
+    padding: 120px 0;
+  }
+
+  .main-about-img {
+    margin-bottom: 100px;
   }
 }

@@ -31,7 +31,7 @@
 
   <main class="main" id="home">
     <section class="main-hero">
-      <div class="container">
+      <div class="container main-hero-container">
         <div class="main-hero-highlight">
           <h1>I'm <strong>Elle Kasai</strong>,a <strong>designer/developer</strong> based in vancouver, Canada.</h1>
           <div class="main-hero-highlight-links">
@@ -111,13 +111,14 @@
         </div>
       </div>
     </section>
+
     <section class="main-about" id="about">
       <h2><i class="fa-solid fa-icons"></i>About</h2>
       <figure class="main-about-img">
         <img class="mobile" src="./images/image-profile.jpg" alt="profile">
         <img class="tablet-and-up" src="./images/image-about.jpg" alt="about">
       </figure>
-      <div class="container">
+      <div class="container main-about-container">
         <div class="main-about-description">
           <h3>自己紹介</h3>
           <p>
@@ -186,10 +187,14 @@
   </main>
 
   <footer class="footer" id="contact">
-    <div class="container">
+    <div class="container footer-container">
       <div class="footer-form">
         <p>お仕事のご依頼やご相談等、お問い合わせはこちらからどうぞ</p>
         <form>
+          <div class="footer-form-input">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" placeholder="氏名">
+          </div>
           <div class="footer-form-input">
             <i class="fa-regular fa-envelope"></i>
             <input type="email" placeholder="メールアドレス">
@@ -202,8 +207,8 @@
       </div>
       <div class="footer-info">
         <div class="footer-info-nav">
+          <img src="./images/image-logo.svg" alt="logo" class="footer-info-nav-img">
           <nav class="footer-info-nav-menu">
-            <img src="./images/image-logo.svg" alt="logo" class="footer-info-nav-img">
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#works">Works</a></li>

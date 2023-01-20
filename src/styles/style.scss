@@ -4,6 +4,7 @@
 @forward "hero";
 @forward "utill";
 @forward "works";
+@use "mixin" as *;
 
 *,
 *::before,
@@ -77,4 +78,50 @@ input[type="submit"]:hover {
 
 .social-link li + li {
   margin-left: 20px;
+}
+
+/* モバイル */
+
+@include mq(sp) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  h2 > i {
+    margin-right: 10px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+// タブレット版
+@include mq(tb) {
+  h1,
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+  }
+
+  h2 > i {
+    margin-right: 20px;
+  }
 }
