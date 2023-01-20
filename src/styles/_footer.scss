@@ -1,0 +1,71 @@
+@use "mixin" as *;
+
+.footer {
+  background-color: #3a4454;
+  color: #fff7f7;
+}
+
+.footer-form form,
+.footer-form-input,
+.footer-form-textarea {
+  width: 100%;
+}
+
+.footer-form-input input {
+  padding: 10px 15px 10px 40px;
+}
+
+.footer-form-textarea textarea {
+  height: 150px;
+  padding: 10px 15px;
+  resize: none;
+}
+
+.footer-form-input input,
+.footer-form-textarea textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #c2b2b4;
+  border-radius: 5px;
+  color: #fff7f7;
+}
+
+.footer-form-input {
+  position: relative;
+}
+
+.footer-form-input i {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  color: #fff7f7;
+}
+
+.footer-info-nav-menu ul {
+  font-family: "Piazzolla", sans-serif;
+}
+
+.footer-info-nav-menu a {
+  color: #fff7f7;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.footer-info-nav-menu a:hover,
+.footer-info-nav-menu a:focus {
+  color: #9c9da5;
+}
+
+.footer-info-follow a {
+  color: #9c9da5;
+  font-size: 1.5rem;
+
+  &:hover,
+  &:focus {
+    color: #81838d;
+  }
+}
+
+.footer-info-copy {
+  color: #9c9da5;
+}
